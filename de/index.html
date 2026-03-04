@@ -3,16 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Soziales Projekt – Sophira</title>
+  <title>Sophira – Verein für berufliche Neuorientierung</title>
 
   <!-- SEO -->
   <link rel="canonical" href="https://sophira.ch/de/" />
   <meta name="robots" content="index,follow" />
-  <meta name="description" content="Erfahren Sie, wie das Sophira-Stipendium Erwachsenen in der Schweiz hilft, sich in Zukunftsberufe neu zu orientieren. Kriterien, Ablauf, Begleitung – und wie Sie sich bewerben oder Partner werden." />
+  <meta name="description" content="Sophira unterstützt Erwachsene in der Schweiz bei ihrer beruflichen Neuorientierung in Zukunftsberufe (Daten, grüne Technologien, digitale Gesundheit, KI)." />
 
   <!-- Hreflang -->
   <link rel="alternate" hreflang="fr" href="https://sophira.ch/fr/" />
   <link rel="alternate" hreflang="de" href="https://sophira.ch/de/" />
+  <link rel="alternate" hreflang="x-default" href="https://sophira.ch/fr/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sophira – Verein für berufliche Neuorientierung" />
+  <meta property="og:description" content="Arbeitslosigkeit durch Automatisierung bekämpfen und Chancen in Zukunftsberufen eröffnen." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sophira.ch/de/" />
+  <meta property="og:image" content="https://sophira.ch/assets/images/optimized/logo.webp" />
+  <meta property="og:site_name" content="Sophira" />
+  <meta property="og:locale" content="de_CH" />
 
   <!-- Favicons -->
   <link rel="icon" href="/assets/icons/favicon.ico" />
@@ -40,9 +50,27 @@
     gtag('js', new Date());
     gtag('config', 'G-FL1S0MJWB1');
   </script>
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NonprofitOrganization",
+    "name": "Sophira",
+    "url": "https://sophira.ch/",
+    "logo": "https://sophira.ch/assets/images/optimized/logo.webp",
+    "foundingLocation": "Basel, Schweiz",
+    "areaServed": "CH",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Basel",
+      "addressCountry": "CH"
+    }
+  }
+  </script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Aller au contenu principal</a>
+  <a class="skip-link" href="#main">Zum Hauptinhalt springen</a>
 
   <div class="overlay">
     <!-- NAVIGATION -->
@@ -53,13 +81,13 @@
       </a>
 
       <nav class="primary">
-        <a href="/de/">Accueil</a>
-        <a href="/de/team.html">Équipe</a>
-        <a href="/de/project.html">Projet social</a>
-        <a href="/de/dashboard.html">Tableau de bord</a>
-        <a href="/jobs/">Portail Emplois</a>
+        <a href="/de/" aria-current="page">Startseite</a>
+        <a href="/de/team.html">Team</a>
+        <a href="/de/project.html">Soziales Projekt</a>
+        <a href="/de/dashboard.html">Dashboard</a>
+        <a href="/jobs/">Stellenportal</a>
         <a href="/de/blog.html">Blog</a>
-        <a href="/de/contact.html">Contact</a>
+        <a href="/de/contact.html">Kontakt</a>
       </nav>
 
       <div class="controls">
@@ -71,11 +99,11 @@
           DE
         </button>
         <div id="lang-menu" class="lang-menu" aria-hidden="true">
-          <a href="/fr/" lang="fr" >Français</a>
+          <a href="/fr/" lang="fr">Français</a>
           <a href="/de/" lang="de" aria-current="true">Deutsch</a>
         </div>
 
-        <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-controls="menu-mobile" aria-expanded="false">
+        <button class="burger" id="burger" aria-label="Menü öffnen" aria-controls="menu-mobile" aria-expanded="false">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
             <path d="M3 6h18M3 12h18M3 18h18" stroke-width="2" stroke-linecap="round"/>
           </svg>
@@ -85,200 +113,98 @@
 
     <div id="menu-mobile" class="mobile-panel" hidden>
       <div class="mobile-links">
-        <a href="/de/">Accueil</a>
-        <a href="/de/team.html">Équipe</a>
-        <a href="/de/project.html">Projet social</a>
-        <a href="/de/dashboard.html">Tableau de bord</a>
-        <a href="/jobs/">Portail Emplois</a>
+        <a href="/de/" aria-current="page">Startseite</a>
+        <a href="/de/team.html">Team</a>
+        <a href="/de/project.html">Soziales Projekt</a>
+        <a href="/de/dashboard.html">Dashboard</a>
+        <a href="/jobs/">Stellenportal</a>
         <a href="/de/blog.html">Blog</a>
-        <a href="/de/contact.html">Contact</a>
+        <a href="/de/contact.html">Kontakt</a>
       </div>
     </div>
 
     <!-- MAIN CONTENT -->
     <main id="main" class="container">
-<!-- Hero + CTAs -->
+      <!-- HERO -->
       <section class="hero">
-        <h2>Unser soziales Projekt</h2>
+        <h2>Talente von morgen fördern</h2>
         <p class="subtitle">
-          Ein kompletter Weg für Erwachsene in der Schweiz: <strong>Stipendium zur Neuorientierung</strong>, <strong>Mentoring</strong> und <strong>Vermittlung</strong> in Zukunftsberufe (Daten, nachhaltige Tech, digitale Gesundheit, KI).
+          Sophira ist ein gemeinnütziger Schweizer Verein, der Erwachsene unterstützt,
+          die bei ihrer beruflichen Neuorientierung in Zukunftsberufe – von Daten bis zu grünen Technologien – auf Hindernisse stoßen.
         </p>
-        <div class="cta-row" role="group" aria-label="Hauptaktionen">
-          <a class="btn" href="contact-de.html">Bewerben / Kontakt</a>
-          <a class="btn outline" href="dashboard-de.html">Unsere Kennzahlen</a>
-          <a class="btn" href="donate-de.html">Spenden</a>
+
+        <div class="glance">
+          <div class="item">
+            <strong>Zielgerichtetes Stipendium</strong>
+            Deckt einen Teil der Ausbildungs- und der wichtigsten Ausrüstungskosten ab.
+          </div>
+          <div class="item">
+            <strong>Mentoring & Netzwerk</strong>
+            Vermittlung, Coaching und konkretes Feedback von Fachleuten.
+          </div>
+          <div class="item">
+            <strong>Reale Projekte</strong>
+            Sozial wirksame Fälle, um schnell ein glaubwürdiges Portfolio aufzubauen.
+          </div>
+        </div>
+
+        <div class="quick">
+          <a class="btn" href="/de/project.html">Projekt verstehen</a>
+          <a class="btn outline" href="/de/contact.html">Kontakt aufnehmen</a>
+          <a class="btn" href="/de/donate.html">Unterstützen</a>
         </div>
       </section>
 
-      <!-- Zielgruppe / Was deckt das Stipendium ab -->
-      <section class="section">
-        <h3>Für wen? Was wird finanziert?</h3>
-        <div class="grid">
-          <div class="col-6">
-            <div class="card">
-              <span class="badge ok">Zielgruppe</span>
-              <ul>
-                <li>Erwachsene in Arbeits- oder Unterbeschäftigung</li>
-                <li>Menschen in beruflicher Transition (Neuorientierung, Belastung, Umschulung)</li>
-                <li>Personen mit <em>strukturellen Hürden</em> (Finanzen, Netzwerk, Sprache)</li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="card">
-              <span class="badge ok">Das Stipendium deckt</span>
-              <ul>
-                <li>Ausbildungskosten (zertifizierte/kürzere Programme)</li>
-                <li>Ausrüstung &amp; Tools (Lizenzen, Bücher, Fahrten)</li>
-                <li>Mentoring &amp; Unterstützung bei der Vermittlung</li>
-              </ul>
-              <p style="margin:.6rem 0 0;color:var(--muted);font-size:.95rem">
-                <strong>Transparenz</strong> — einfache öffentliche Berichte und Wirkungs-Tracking.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 5 Schritte -->
-      <section class="section" aria-label="Neuorientierungsprozess">
-        <h3>Der Weg in 5 Schritten</h3>
-        <div class="timeline">
-          <div class="step">
-            <h4>1. Kennenlernen &amp; Diagnose</h4>
-            <p>Erstgespräch, Projektcheck, digitale Affinität, Rahmenbedingungen (Zeit, Finanzen, Familie).</p>
-          </div>
-          <div class="step">
-            <h4>2. Individueller Plan</h4>
-            <p>Wahl der Richtung (z. B. <em>ICT-Assistenz</em>, <em>Junior Data Analyst</em>, <em>Digitale Zusammenarbeit</em>), Zeitplan, Ziele.</p>
-          </div>
-          <div class="step">
-            <h4>3. Stipendium &amp; Lernen</h4>
-            <p>Zugang zu Kursen (Python/Excel/Statistik/Cloud), Grundlagen und wöchentliches Coaching.</p>
-          </div>
-          <div class="step">
-            <h4>4. Projekte &amp; Portfolio</h4>
-            <p>Reale sozialwirksame Fälle, GitHub-Portfolio, technische Übungen, Feedback von Mentor*innen/Unternehmen.</p>
-          </div>
-          <div class="step">
-            <h4>5. Vermittlung &amp; Follow-up</h4>
-            <p>Vernetzung, Interviewvorbereitung, 6–12 Monate Begleitung, <em>Upskilling</em> bei Bedarf.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Kriterien & Prozess -->
-      <section class="section" aria-label="Kriterien und Auswahlprozess">
-        <h3>Kriterien &amp; Prozess</h3>
-        <div class="grid">
-          <div class="col-6">
-            <div class="card">
-              <span class="badge ok">Förderfähig wenn</span>
-              <ul>
-                <li>Wohnsitz in der Schweiz (oder lokaler Integrationsplan)</li>
-                <li>Nachweisbare Motivation &amp; minimale Verfügbarkeit</li>
-                <li>Realistisches Ziel in einem Zukunftsberuf</li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="card">
-              <span class="badge warn">Ablauf</span>
-              <ol style="padding-left:1.1rem; margin:.4rem 0;">
-                <li>Kontaktaufnahme → <a href="contact-de.html">Formular</a></li>
-                <li>Interview &amp; kurze Eignungsaufgaben</li>
-                <li>Entscheid &amp; Start</li>
-              </ol>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Impact-Mini-Stats -->
-      <section class="section" aria-label="Wirkung (Überblick)">
-        <h3>Wirkung (Überblick)</h3>
-        <div class="stats">
-          <div class="stat">
-            <div class="n">80%</div>
-            <div class="l">Abschlussquote (Pilotziel)</div>
-          </div>
-          <div class="stat">
-            <div class="n">6–9 Monate</div>
-            <div class="l">Durchschnittliche Programmdauer</div>
-          </div>
-          <div class="stat">
-            <div class="n">70%</div>
-            <div class="l">Vermittlung binnen 12 Monaten (Ziel)</div>
-          </div>
-        </div>
-        <p style="text-align:center; color:var(--muted); margin-top:.7rem">
-          Detaillierte Daten finden Sie im <a href="dashboard-de.html">Dashboard</a>.
+      <!-- WARUM SOPHIRA -->
+      <section class="content">
+        <h3>Warum Sophira?</h3>
+        <p>
+          Sophira entstand aus der Überzeugung, dass die digitalen und ökologischen Transformationen den Arbeitsmarkt verändern
+          und dabei oft Erwachsene in prekären Situationen ausschließen. Gleichzeitig steigt in der Schweiz der Bedarf
+          an qualifizierten Fachkräften in diesen Bereichen.
+        </p>
+        <p>
+          Wir setzen uns dafür ein, Barrieren abzubauen und konkrete Chancen zu schaffen. Sophira begleitet Erwachsene bei der Neuorientierung
+          in sinnstiftende Berufe, vermittelt die nötigen digitalen und analytischen Kompetenzen und bietet finanzielle sowie menschliche Unterstützung.
         </p>
       </section>
 
-      <!-- Partnerschaften -->
-      <section class="section" aria-label="Partnerschaften">
-        <h3>Werden Sie Partner</h3>
-        <div class="grid">
-          <div class="col-6">
-            <div class="card">
-              <strong>Unternehmen &amp; Institutionen</strong>
-              <ul>
-                <li>Aufnahme konkreter Projekte</li>
-                <li>Mentoring / fachliches Coaching</li>
-                <li>Praktika, Jobs, <em>Job-Shadowing</em></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="card">
-              <strong>Schulen &amp; Bildungsträger</strong>
-              <ul>
-                <li>Geförderte Plätze / Sozialtarife</li>
-                <li>Mitgestaltung kurzer zertifizierender Wege</li>
-                <li>Brücken &amp; Anrechnungen</li>
-              </ul>
-            </div>
-          </div>
+      <!-- BLOG TEASER -->
+      <section class="teaser">
+        <h3>Aktuelle Nachrichten</h3>
+        <div class="posts">
+          <article class="post">
+            <h4>Zukunftssichere Sektoren 2025</h4>
+            <p>Entdecken Sie die vielversprechendsten Bereiche für eine berufliche Neuorientierung.</p>
+            <a href="/blog/de/article-2.html">Weiterlesen</a>
+          </article>
+
+          <article class="post">
+            <h4>Initiativenstart</h4>
+            <p>Sophira startet seine Mission zur Unterstützung von Erwachsenen in der Schweiz.</p>
+            <a href="/blog/de/article-6.html">Weiterlesen</a>
+          </article>
+
+          <article class="post">
+            <h4>Daten & Neuorientierung</h4>
+            <p>Wie Datenkompetenzen neue Karrieremöglichkeiten eröffnen.</p>
+            <a href="/blog/de/article-7.html">Weiterlesen</a>
+          </article>
         </div>
-        <p style="text-align:center; margin:.8rem 0 0;">
-          Interessiert? <a href="contact-de.html">Kontaktieren Sie uns</a> oder <a href="donate-de.html">unterstützen Sie das Stipendium</a>.
-        </p>
       </section>
 
-      <!-- FAQ kurz -->
-      <section class="section" aria-label="Häufige Fragen">
-        <h3>FAQ</h3>
-        <details>
-          <summary>Ist das Stipendium rückzahlbar?</summary>
-          <p>Nein. Es dient dazu, finanzielle Hürden beim Zugang zu Bildung abzubauen.</p>
-        </details>
-        <details>
-          <summary>Muss ich bereits programmieren können?</summary>
-          <p>Nicht zwingend. Wir prüfen die Eignung und bieten bei Bedarf eine fundierte Einstiegsvorbereitung.</p>
-        </details>
-        <details>
-          <summary>Welche Verfügbarkeit wird erwartet?</summary>
-          <p>Zwischen 8 und 20 Std./Woche je nach gewähltem Weg – mit regelmässigen Terminen.</p>
-        </details>
-      </section>
-
-      <!-- CTA final -->
-      <section class="cta" aria-label="Handeln">
-        <h3>Bereit zum Start – oder zum Unterstützen?</h3>
-        <p>Wir begleiten Schritt für Schritt. Sprechen wir über Ihr Projekt – oder helfen Sie mit, ein Stipendium zu finanzieren.</p>
-        <div class="cta-row">
-          <a class="btn" href="contact-de.html">Bewerben / Kontakt</a>
-          <a class="btn outline" href="donate-de.html">Stipendium unterstützen</a>
-          <a class="btn" href="team-de.html">Team kennenlernen</a>
-        </div>
+      <!-- CTA FINAL -->
+      <section class="cta">
+        <h3>Unterstützen Sie unsere Vision</h3>
+        <p>Gestalten wir gemeinsam eine gerechtere Zukunft, indem wir neue Talente durch Solidarität und lebenslanges Lernen fördern.</p>
+        <a href="/de/donate.html">Projekt unterstützen</a>
       </section>
     </main>
 
     <footer>
-      <p>&copy; 2026 Sophira Association | Basel, Suisse | 
-         <a href="/de/privacy.html">Confidentialité</a> | 
-         <a href="/de/legal.html">Mentions légales</a>
+      <p>&copy; 2026 Sophira Association | Basel, Schweiz | 
+         <a href="/de/privacy.html">Datenschutz</a> | 
+         <a href="/de/legal.html">Impressum</a>
       </p>
     </footer>
   </div>
@@ -287,15 +213,15 @@
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
       <path d="M21 15a4 4 0 0 1-4 4H8l-5 4V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v8z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
-    <span>Assistant Sophira</span>
+    <span>Sophira Assistent</span>
   </a>
 
   <div id="cookie-banner" class="cookie-banner" role="dialog">
-    <p><strong>Cookies & confidentialité.</strong> Nous utilisons des cookies essentiels au fonctionnement du site et, avec votre accord, des mesures d'audience (Google Analytics). <a href="/de/privacy.html">En savoir plus</a></p>
+    <p><strong>Cookies & Datenschutz.</strong> Wir verwenden funktionale Cookies und – mit Ihrer Einwilligung – Reichweitenmessung (Google Analytics).</p>
     <div class="cookie-actions">
-      <button class="btn minor" id="cookie-refuse">Refuser l'analyse</button>
-      <button class="btn" id="cookie-accept">Accepter l'analyse</button>
-      <button class="btn outline" id="cookie-later">Plus tard</button>
+      <button class="btn minor" id="cookie-refuse">Analyse ablehnen</button>
+      <button class="btn" id="cookie-accept">Analyse akzeptieren</button>
+      <button class="btn outline" id="cookie-later">Später</button>
     </div>
   </div>
 
