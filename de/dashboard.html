@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard – Sophira</title>
+
+  <!-- SEO -->
+  <link rel="canonical" href="https://sophira.ch/de/dashboard.html" />
+  <meta name="robots" content="index,follow" />
+  <meta name="description" content="Entdecken Sie das interaktive Dashboard von Sophira: Datenvisualisierungen zu Beschäftigung, Wachstum und Branchen in Europa und der Schweiz." />
+
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="fr" href="https://sophira.ch/fr/dashboard.html" />
+  <link rel="alternate" hreflang="de" href="https://sophira.ch/de/dashboard.html" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="/assets/icons/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/main.css" />
+
+  <!-- GA4 -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('consent','default',{
+      ad_storage:'denied',
+      analytics_storage:'denied',
+      functionality_storage:'granted',
+      security_storage:'granted',
+      ad_user_data:'denied',
+      ad_personalization:'denied',
+      wait_for_update:500
+    });
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FL1S0MJWB1"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-FL1S0MJWB1');
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu principal</a>
+
+  <div class="overlay">
+    <!-- NAVIGATION -->
+    <header class="navbar" role="navigation">
+      <a class="brand" href="/de/">
+        <img src="/assets/images/optimized/logo.webp" alt="Logo Sophira" loading="eager" />
+        <h1>Sophira</h1>
+      </a>
+
+      <nav class="primary">
+        <a href="/de/">Accueil</a>
+        <a href="/de/team.html">Équipe</a>
+        <a href="/de/project.html">Projet social</a>
+        <a href="/de/dashboard.html">Tableau de bord</a>
+        <a href="/jobs/">Portail Emplois</a>
+        <a href="/de/blog.html">Blog</a>
+        <a href="/de/contact.html">Contact</a>
+      </nav>
+
+      <div class="controls">
+        <button class="lang-btn" id="lang-btn" aria-haspopup="true" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <circle cx="12" cy="12" r="10" stroke-width="2"/>
+            <path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          DE
+        </button>
+        <div id="lang-menu" class="lang-menu" aria-hidden="true">
+          <a href="/fr/dashboard.html" lang="fr" >Français</a>
+          <a href="/de/dashboard.html" lang="de" aria-current="true">Deutsch</a>
+        </div>
+
+        <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-controls="menu-mobile" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M3 6h18M3 12h18M3 18h18" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <div id="menu-mobile" class="mobile-panel" hidden>
+      <div class="mobile-links">
+        <a href="/de/">Accueil</a>
+        <a href="/de/team.html">Équipe</a>
+        <a href="/de/project.html">Projet social</a>
+        <a href="/de/dashboard.html">Tableau de bord</a>
+        <a href="/jobs/">Portail Emplois</a>
+        <a href="/de/blog.html">Blog</a>
+        <a href="/de/contact.html">Contact</a>
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main id="main" class="container">
+<section class="section">
+        <h2>Interaktives Dashboard</h2>
+        <p itemprop="description">Ausgewählte Visualisierungen (öffentliche Tableau-Quellen) zu Beschäftigung, Wachstum und Branchenstruktur. Nutzen Sie die Filter direkt in jedem Chart.</p>
+
+        <div class="viz-grid" aria-label="Eingebettete Visualisierungen">
+          <!-- NEU: McKinsey -->
+          <article class="viz-card">
+            <h3>Automatisierung und US-Arbeitsplätze</h3>
+            <div class="viz-meta">Quelle: McKinsey Analytics · Tableau Public</div>
+            <div class="iframe-container">
+              <iframe src="https://public.tableau.com/views/AutomationandUSjobs/USAutomationlandscape?:showVizHome=no&embed=true" title="McKinsey Analytics – Automation and US jobs" loading="lazy"></iframe>
+            </div>
+            <div class="viz-actions">
+              <a class="btn small link" href="https://public.tableau.com/views/AutomationandUSjobs/USAutomationlandscape" target="_blank" rel="noopener noreferrer">Auf Tableau Public ansehen</a>
+            </div>
+          </article>
+
+          <!-- NEU: England -->
+          <article class="viz-card">
+            <h3>Automatisierung in England</h3>
+            <div class="viz-meta">Quelle: Mohammed Hemayed · Tableau Public</div>
+            <div class="iframe-container">
+              <iframe src="https://public.tableau.com/views/JobAutomationinEngland/AutomationinEngland?:showVizHome=no&embed=true" title="Job Automation in England – Mohammed Hemayed" loading="lazy"></iframe>
+            </div>
+            <div class="viz-actions">
+              <a class="btn small link" href="https://public.tableau.com/views/JobAutomationinEngland/AutomationinEngland" target="_blank" rel="noopener noreferrer">Auf Tableau Public ansehen</a>
+            </div>
+          </article>
+
+          <!-- Bestehend: Kategorie 2 -->
+          <article class="viz-card">
+            <h3>Stellensuchende – Kategorie 2</h3>
+            <div class="viz-meta">Quelle: RTS Info · Tableau Public</div>
+            <div class="iframe-container">
+              <iframe src="https://public.tableau.com/views/DemandeursemploiCat2/Dashboard1?:showVizHome=no&embed=true" title="RTS – Stellensuchende Kategorie 2" loading="lazy"></iframe>
+            </div>
+            <div class="viz-actions">
+              <a class="btn small link" href="https://public.tableau.com/views/DemandeursemploiCat2/Dashboard1" target="_blank" rel="noopener noreferrer">Auf Tableau Public ansehen</a>
+            </div>
+          </article>
+
+          <!-- Bestehend: Wachstum -->
+          <article class="viz-card">
+            <h3>Wachstum in Europa</h3>
+            <div class="viz-meta">Quelle: RTS Info · Tableau Public</div>
+            <div class="iframe-container">
+              <iframe src="https://public.tableau.com/views/croissance_europenne/Dashboard1?:showVizHome=no&embed=true" title="RTS – Wachstum in Europa" loading="lazy"></iframe>
+            </div>
+            <div class="viz-actions">
+              <a class="btn small link" href="https://public.tableau.com/views/croissance_europenne/Dashboard1" target="_blank" rel="noopener noreferrer">Auf Tableau Public ansehen</a>
+            </div>
+          </article>
+
+          <!-- Bestehend: Prospective -->
+          <article class="viz-card">
+            <h3>Arbeitsmarktentwicklung – Branchen &amp; Löhne</h3>
+            <div class="viz-meta">Quelle: Vincent Laporte · Tableau Public</div>
+            <div class="iframe-container">
+              <iframe src="https://public.tableau.com/views/Prospectiveemploi/Secteurssalaris?:showVizHome=no&embed=true" title="Arbeitsmarktentwicklung – Branchen & Löhne" loading="lazy"></iframe>
+            </div>
+            <div class="viz-actions">
+              <a class="btn small link" href="https://public.tableau.com/views/Prospectiveemploi/Secteurssalaris" target="_blank" rel="noopener noreferrer">Auf Tableau Public ansehen</a>
+            </div>
+          </article>
+
+          <!-- Bestehend: Industrie -->
+          <article class="viz-card">
+            <h3>Industrieanteil an der Beschäftigung</h3>
+            <div class="viz-meta">Quelle: Grégoire3273 · Tableau Public</div>
+            <div class="iframe-container">
+              <iframe src="https://public.tableau.com/views/poidsdelindustriedanslemploi/Dashboard1?:showVizHome=no&embed=true" title="Industrieanteil an der Beschäftigung" loading="lazy"></iframe>
+            </div>
+            <div class="viz-actions">
+              <a class="btn small link" href="https://public.tableau.com/views/poidsdelindustriedanslemploi/Dashboard1" target="_blank" rel="noopener noreferrer">Auf Tableau Public ansehen</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta" aria-label="Call to Action">
+        <h3>Sie haben Daten zu teilen?</h3>
+        <p>Tragen Sie zur Erweiterung dieses Dashboards bei (Partnerschaften, Datensätze, Visualisierungsideen).</p>
+        <a href="contact-de.html">Kontakt aufnehmen</a>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Sophira Association | Basel, Suisse | 
+         <a href="/de/privacy.html">Confidentialité</a> | 
+         <a href="/de/legal.html">Mentions légales</a>
+      </p>
+    </footer>
+  </div>
+
+  <a class="chat-fab" href="https://chatgpt.com/g/g-68d273dcee0081918dc19a72db072503-sophira-ai-assistant" target="_blank" rel="noopener">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <path d="M21 15a4 4 0 0 1-4 4H8l-5 4V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v8z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span>Assistant Sophira</span>
+  </a>
+
+  <div id="cookie-banner" class="cookie-banner" role="dialog">
+    <p><strong>Cookies & confidentialité.</strong> Nous utilisons des cookies essentiels au fonctionnement du site et, avec votre accord, des mesures d'audience (Google Analytics). <a href="/de/privacy.html">En savoir plus</a></p>
+    <div class="cookie-actions">
+      <button class="btn minor" id="cookie-refuse">Refuser l'analyse</button>
+      <button class="btn" id="cookie-accept">Accepter l'analyse</button>
+      <button class="btn outline" id="cookie-later">Plus tard</button>
+    </div>
+  </div>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="0; url=/fr/">
+  <title>Sophira - Redirection...</title>
+  <script>
+    // Redirect with language detection
+    const userLang = navigator.language || navigator.userLanguage;
+    if (userLang.startsWith('de')) {
+      window.location.href = '/de/';
+    } else {
+      window.location.href = '/fr/';
+    }
+  </script>
+</head>
+<body>
+  <p>Redirection vers <a href="/fr/">Sophira</a>...</p>
+</body>
+</html>

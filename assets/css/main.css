@@ -1,0 +1,694 @@
+/* ============================================
+   SOPHIRA.CH - CSS CONSOLIDÉ
+   Version 2.0 - Optimisé et structuré
+   ============================================ */
+
+/* ========== 1. FONTS SELF-HOSTED ========== */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/inter-400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../fonts/inter-600.woff2') format('woff2');
+}
+
+/* ========== 2. CSS VARIABLES ========== */
+:root {
+  /* Colors */
+  --text: #2c3e50;
+  --muted: #4a5568;
+  --brand: #1a73e8;
+  --brand-hover: #155ab6;
+  --whiteglass: #ffffffdd;
+  --panel: #edf2f7cc;
+  
+  /* Layout */
+  --radius: 12px;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, .05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, .08);
+  --container: 980px;
+  
+  /* Focus */
+  --focus: #0d6efd;
+  --focus-bg: #e8f0fe;
+  
+  /* Z-index layers */
+  --z-header: 20;
+  --z-lang: 60;
+  --z-cookie: 70;
+  --z-fab: 30;
+  
+  /* Fonts */
+  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* ========== 3. RESET & BASE ========== */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background: url('../images/optimized/background.webp') no-repeat center center fixed;
+  background-size: cover;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Fallback for browsers without WebP support */
+@supports not (background-image: url('test.webp')) {
+  body {
+    background-image: url('../images/fallback/mathew-schwartz-91ryOVMlBJc-unsplash.jpg');
+  }
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+/* ========== 4. ACCESSIBILITY ========== */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: .5rem;
+  transform: translateY(-200%);
+  background: #000;
+  color: #fff;
+  padding: .6rem .9rem;
+  border-radius: 8px;
+  text-decoration: none;
+  z-index: 1000;
+  box-shadow: var(--shadow-sm);
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+  outline: 2px solid #fff;
+}
+
+/* Focus visible global */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+  background: linear-gradient(0deg, var(--focus-bg), var(--focus-bg)) no-repeat;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* ========== 5. LAYOUT GLOBAL ========== */
+.overlay {
+  min-height: 100vh;
+  background: rgba(255, 255, 255, .9);
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1;
+  max-width: var(--container);
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* ========== 6. NAVIGATION ========== */
+header.navbar {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-header);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  padding: .8rem 1rem;
+  background: var(--whiteglass);
+  box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(6px);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  min-width: 0;
+  text-decoration: none;
+}
+
+.brand img {
+  height: 48px;
+  width: auto;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 1.55rem;
+  font-weight: 600;
+  color: #1a202c;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+nav.primary {
+  display: flex;
+  gap: 1.1rem;
+  align-items: center;
+}
+
+nav.primary a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  transition: color .2s ease;
+}
+
+nav.primary a:hover,
+nav.primary a:focus {
+  color: #1e88e5;
+}
+
+nav.primary a[aria-current="page"] {
+  color: var(--brand);
+  font-weight: 600;
+}
+
+/* ========== 7. LANGUAGE SELECTOR ========== */
+.controls {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  position: relative;
+}
+
+.lang-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  padding: .35rem .6rem;
+  font-weight: 600;
+  color: #1f2937;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+}
+
+.lang-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.lang-menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  z-index: var(--z-lang);
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+  padding: .35rem;
+  min-width: 120px;
+  display: none;
+}
+
+.lang-menu.open {
+  display: block;
+}
+
+.lang-menu a {
+  display: block;
+  padding: .5rem .65rem;
+  text-decoration: none;
+  color: #111827;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background .2s ease;
+}
+
+.lang-menu a:hover {
+  background: #f3f4f6;
+}
+
+.lang-menu a[aria-current="true"] {
+  color: #1a73e8;
+}
+
+/* ========== 8. BURGER MENU ========== */
+.burger {
+  display: none;
+  background: none;
+  border: none;
+  padding: .4rem .6rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.burger svg {
+  width: 28px;
+  height: 28px;
+}
+
+.mobile-panel {
+  display: block;
+  position: fixed;
+  inset: 64px 0 0 0;
+  background: var(--whiteglass);
+  backdrop-filter: blur(6px);
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.mobile-links {
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+}
+
+.mobile-links a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  padding: .7rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.mobile-links a:last-child {
+  border-bottom: none;
+}
+
+/* ========== 9. HERO SECTION ========== */
+.hero {
+  background: var(--panel);
+  padding: 2.4rem 1.4rem;
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: var(--shadow-md);
+}
+
+.hero h2 {
+  font-size: 2.1rem;
+  margin: .2rem 0 .7rem;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 1.08rem;
+  color: var(--muted);
+  margin: 0 auto;
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+/* ========== 10. GLANCE (Aperçu rapide) ========== */
+.glance {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: .8rem;
+}
+
+.glance .item {
+  grid-column: span 12;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: var(--shadow-sm);
+  padding: .9rem 1rem;
+  text-align: left;
+}
+
+.glance .item strong {
+  display: block;
+  margin-bottom: .25rem;
+  font-weight: 600;
+}
+
+/* ========== 11. BUTTONS ========== */
+.quick {
+  margin-top: 1rem;
+  display: flex;
+  gap: .6rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--brand);
+  color: #fff;
+  text-decoration: none;
+  padding: .6rem 1rem;
+  border-radius: 10px;
+  font-weight: 700;
+  transition: all .2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--brand-hover);
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn.outline {
+  background: transparent;
+  color: var(--brand);
+  border: 2px solid var(--brand);
+}
+
+.btn.outline:hover {
+  background: #e8f0fe;
+}
+
+.btn.minor {
+  background: #eef2ff;
+  color: #1f2a66;
+  border: 1px solid #c7d2fe;
+}
+
+/* ========== 12. CONTENT SECTIONS ========== */
+.content {
+  margin-top: 2rem;
+  background: var(--whiteglass);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.content h3 {
+  font-size: 1.55rem;
+  margin: .2rem 0 .6rem;
+}
+
+.content p {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+/* ========== 13. BLOG TEASER ========== */
+.teaser {
+  margin-top: 2rem;
+  background: var(--whiteglass);
+  padding: 1.2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.teaser h3 {
+  margin: .1rem 0 .6rem;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.posts {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: .8rem;
+}
+
+.post {
+  grid-column: span 12;
+  background: #fff;
+  border-radius: 10px;
+  padding: .9rem 1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.post h4 {
+  margin: .2rem 0 .2rem;
+  font-size: 1.05rem;
+}
+
+.post p {
+  margin: .1rem 0 .4rem;
+  color: #374151;
+}
+
+.post a {
+  font-weight: 600;
+  color: #fff;
+  background: var(--brand);
+  padding: .4rem .7rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background .2s ease;
+}
+
+.post a:hover {
+  background: var(--brand-hover);
+}
+
+/* ========== 14. CTA SECTION ========== */
+.cta {
+  margin-top: 2rem;
+  background: #f7fafc;
+  padding: 2rem;
+  text-align: center;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.cta h3 {
+  margin-top: 0;
+}
+
+.cta a {
+  display: inline-block;
+  margin-top: 1rem;
+  background: var(--brand);
+  color: #fff;
+  text-decoration: none;
+  padding: .7rem 1.4rem;
+  border-radius: 10px;
+  font-weight: 700;
+  transition: background .2s ease;
+}
+
+.cta a:hover {
+  background: var(--brand-hover);
+}
+
+/* ========== 15. FOOTER ========== */
+footer {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+  font-size: .95rem;
+  color: #4a4a4a;
+  background: var(--whiteglass);
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+}
+
+footer a {
+  color: var(--brand);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ========== 16. CHAT FAB (Floating Action Button) ========== */
+.chat-fab {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: var(--z-fab);
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .8rem 1rem;
+  border-radius: 999px;
+  background: var(--brand);
+  color: #fff;
+  text-decoration: none;
+  box-shadow: var(--shadow-md);
+  transition: all .2s ease;
+}
+
+.chat-fab:hover {
+  background: var(--brand-hover);
+  transform: scale(1.05);
+}
+
+.chat-fab svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ========== 17. COOKIE BANNER ========== */
+.cookie-banner {
+  position: fixed;
+  z-index: var(--z-cookie);
+  inset: auto 12px 12px 12px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  padding: 1rem;
+  display: none;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cookie-actions {
+  display: flex;
+  gap: .6rem;
+  flex-wrap: wrap;
+  margin-top: .6rem;
+}
+
+.cookie-banner .btn {
+  padding: .55rem 1rem;
+}
+
+/* ========== 18. LEGAL PAGES ========== */
+.legal-content {
+  background: var(--whiteglass);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.legal-content h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.legal-content h2 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: .75rem;
+  color: var(--text);
+}
+
+.legal-content h3 {
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  margin-bottom: .5rem;
+}
+
+.legal-content ul,
+.legal-content ol {
+  margin-left: 1.5rem;
+  line-height: 1.8;
+}
+
+.legal-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.legal-content table th,
+.legal-content table td {
+  padding: .75rem;
+  border: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.legal-content table th {
+  background: #f7fafc;
+  font-weight: 600;
+}
+
+/* ========== 19. RESPONSIVE DESIGN ========== */
+
+/* Tablet & small desktop */
+@media (min-width: 680px) {
+  .glance .item {
+    grid-column: span 4;
+  }
+  
+  .post {
+    grid-column: span 4;
+  }
+}
+
+/* Mobile */
+@media (max-width: 980px) {
+  nav.primary {
+    display: none;
+  }
+  
+  .burger {
+    display: inline-flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand img {
+    height: 44px;
+  }
+  
+  .brand h1 {
+    font-size: 1.35rem;
+  }
+  
+  .hero h2 {
+    font-size: 1.7rem;
+  }
+  
+  .chat-fab span {
+    display: none;
+  }
+}
+
+/* ========== 20. ACCESSIBILITY & MOTION ========== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ========== 21. PRINT STYLES ========== */
+@media print {
+  .navbar,
+  .burger,
+  .chat-fab,
+  .cookie-banner {
+    display: none !important;
+  }
+  
+  body {
+    background: white;
+  }
+  
+  .overlay {
+    background: white;
+  }
+}

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kontakt – Sophira</title>
+
+  <!-- SEO -->
+  <link rel="canonical" href="https://sophira.ch/de/contact.html" />
+  <meta name="robots" content="index,follow" />
+  <meta name="description" content="Kontaktieren Sie den Verein Sophira: Adresse, E-Mail, Telefon und Anfahrtsplan in Basel, Schweiz. Kontaktformular verfügbar." />
+
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="fr" href="https://sophira.ch/fr/contact.html" />
+  <link rel="alternate" hreflang="de" href="https://sophira.ch/de/contact.html" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="/assets/icons/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/main.css" />
+
+  <!-- GA4 -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('consent','default',{
+      ad_storage:'denied',
+      analytics_storage:'denied',
+      functionality_storage:'granted',
+      security_storage:'granted',
+      ad_user_data:'denied',
+      ad_personalization:'denied',
+      wait_for_update:500
+    });
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FL1S0MJWB1"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-FL1S0MJWB1');
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu principal</a>
+
+  <div class="overlay">
+    <!-- NAVIGATION -->
+    <header class="navbar" role="navigation">
+      <a class="brand" href="/de/">
+        <img src="/assets/images/optimized/logo.webp" alt="Logo Sophira" loading="eager" />
+        <h1>Sophira</h1>
+      </a>
+
+      <nav class="primary">
+        <a href="/de/">Accueil</a>
+        <a href="/de/team.html">Équipe</a>
+        <a href="/de/project.html">Projet social</a>
+        <a href="/de/dashboard.html">Tableau de bord</a>
+        <a href="/jobs/">Portail Emplois</a>
+        <a href="/de/blog.html">Blog</a>
+        <a href="/de/contact.html">Contact</a>
+      </nav>
+
+      <div class="controls">
+        <button class="lang-btn" id="lang-btn" aria-haspopup="true" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <circle cx="12" cy="12" r="10" stroke-width="2"/>
+            <path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          DE
+        </button>
+        <div id="lang-menu" class="lang-menu" aria-hidden="true">
+          <a href="/fr/contact.html" lang="fr" >Français</a>
+          <a href="/de/contact.html" lang="de" aria-current="true">Deutsch</a>
+        </div>
+
+        <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-controls="menu-mobile" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M3 6h18M3 12h18M3 18h18" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <div id="menu-mobile" class="mobile-panel" hidden>
+      <div class="mobile-links">
+        <a href="/de/">Accueil</a>
+        <a href="/de/team.html">Équipe</a>
+        <a href="/de/project.html">Projet social</a>
+        <a href="/de/dashboard.html">Tableau de bord</a>
+        <a href="/jobs/">Portail Emplois</a>
+        <a href="/de/blog.html">Blog</a>
+        <a href="/de/contact.html">Contact</a>
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main id="main" class="container">
+<div class="content">
+        <h2>Kontakt</h2>
+
+        <!-- Kontextbanner -->
+        <div id="ctx" class="context" role="status" aria-live="polite"></div>
+
+        <div class="contact-info">
+          <p><strong>Adresse:</strong> Sandgrubenstrasse, 4058 Basel, Schweiz</p>
+          <p><strong>E-Mail:</strong> association_sophira@protonmail.com</p>
+
+          <!-- Geschütztes Telefon -->
+          <div class="phone-box" aria-live="polite">
+            <p style="margin:0;"><strong>Telefon:</strong>
+              <span id="phone-mask">+41 ••• ••• •• ••</span>
+              <button id="btn-reveal" class="btn outline" type="button" aria-controls="phone-request">Nummer anzeigen</button>
+            </p>
+            <p class="phone-note">Aus Anti-Spam-Gründen wird die Nummer <strong>nach dem Senden</strong> Ihres Namens und Ihrer E-Mail über das Formular unten angezeigt. Die Anzeige bleibt 30 Tage auf diesem Gerät aktiv.</p>
+
+            <!-- Mini-Formular Netlify (AJAX) -->
+            <form id="phone-request" name="sophira-phone-request" class="phone-form" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+              <input type="hidden" name="form-name" value="sophira-phone-request" />
+              <p style="display:none"><label>Nicht ausfüllen: <input name="bot-field" /></label></p>
+
+              <div>
+                <label for="pr-name">Name und Vorname</label>
+                <input id="pr-name" name="name" autocomplete="name" required />
+              </div>
+              <div>
+                <label for="pr-email">E-Mail</label>
+                <input id="pr-email" type="email" name="email" autocomplete="email" required />
+              </div>
+              <div class="wide">
+                <label><input type="checkbox" id="pr-consent" name="consent" required /> Ich bin einverstanden, dass Sophira mich zu meiner Anfrage kontaktiert.</label>
+              </div>
+              <div class="wide actions">
+                <button class="btn" type="submit">Senden & Nummer anzeigen</button>
+                <button class="btn outline" type="button" id="pr-cancel">Abbrechen</button>
+                <span id="pr-status" class="small" role="status" aria-live="polite"></span>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2752.415159526313!2d7.588576115595142!3d47.55959817918171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4791b9a6f3e10ff7%3A0xdea0a2f76e49767f!2sBasel%2C%20Switzerland!5e0!3m2!1sde!2sch!4v1691010100000"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <section class="form-card" aria-label="Kontaktformular">
+        <h3>Nachricht senden</h3>
+        <p class="muted">Wenn Sie vom Job-Portal kommen, wird die Referenz automatisch übermittelt.</p>
+
+        <form id="main-form" name="sophira-kontakt" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/danke.html">
+          <input type="hidden" name="form-name" value="sophira-kontakt" />
+          <p style="display:none"><label>Nicht ausfüllen: <input name="bot-field" /></label></p>
+
+          <input type="hidden" id="f-ref" name="ref" />
+          <input type="hidden" id="f-type" name="type" />
+
+          <label for="f-name">Name und Vorname</label>
+          <input id="f-name" name="name" autocomplete="name" required />
+
+          <label for="f-email">E-Mail</label>
+          <input id="f-email" type="email" name="email" autocomplete="email" required />
+
+          <label for="f-msg">Nachricht</label>
+          <textarea id="f-msg" name="message" rows="5" placeholder="Ihre Anfrage..."></textarea>
+
+          <label><input type="checkbox" name="consent" required /> Ich bin einverstanden, dass meine Daten zur Kontaktaufnahme verwendet werden.</label>
+
+          <div class="actions">
+            <button class="btn" type="submit">Senden</button>
+            <a class="btn outline" href="jobs/index-de.html">Zum Job-Portal</a>
+          </div>
+        </form>
+      </section>
+
+      <section class="social" aria-label="Soziale Netzwerke">
+        <h3>Folgen Sie uns</h3>
+        <p class="muted">Bleiben Sie über Aktionen, Events und neue Möglichkeiten informiert.</p>
+        <a class="tiktok" href="https://www.tiktok.com/@sophira" target="_blank" rel="noopener">TikTok</a>
+        <a class="linkedin" href="https://www.linkedin.com/company/sophira" target="_blank" rel="noopener">LinkedIn</a>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Sophira Association | Basel, Suisse | 
+         <a href="/de/privacy.html">Confidentialité</a> | 
+         <a href="/de/legal.html">Mentions légales</a>
+      </p>
+    </footer>
+  </div>
+
+  <a class="chat-fab" href="https://chatgpt.com/g/g-68d273dcee0081918dc19a72db072503-sophira-ai-assistant" target="_blank" rel="noopener">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <path d="M21 15a4 4 0 0 1-4 4H8l-5 4V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v8z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span>Assistant Sophira</span>
+  </a>
+
+  <div id="cookie-banner" class="cookie-banner" role="dialog">
+    <p><strong>Cookies & confidentialité.</strong> Nous utilisons des cookies essentiels au fonctionnement du site et, avec votre accord, des mesures d'audience (Google Analytics). <a href="/de/privacy.html">En savoir plus</a></p>
+    <div class="cookie-actions">
+      <button class="btn minor" id="cookie-refuse">Refuser l'analyse</button>
+      <button class="btn" id="cookie-accept">Accepter l'analyse</button>
+      <button class="btn outline" id="cookie-later">Plus tard</button>
+    </div>
+  </div>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
