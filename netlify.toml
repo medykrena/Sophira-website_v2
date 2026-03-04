@@ -1,0 +1,261 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# ============================================
+# REDIRECTS 301 - Migration ancienne structure
+# ============================================
+
+# Root redirect avec détection langue
+[[redirects]]
+  from = "/"
+  to = "/fr/"
+  status = 302
+  force = false
+  conditions = {Language = ["fr"]}
+
+[[redirects]]
+  from = "/"
+  to = "/de/"
+  status = 302
+  force = false
+  conditions = {Language = ["de"]}
+
+# Fallback si pas de langue détectée
+[[redirects]]
+  from = "/"
+  to = "/fr/"
+  status = 302
+
+# ========== Pages FR anciennes → nouvelles ==========
+
+[[redirects]]
+  from = "/index.html"
+  to = "/fr/"
+  status = 301
+
+[[redirects]]
+  from = "/project.html"
+  to = "/fr/project.html"
+  status = 301
+
+[[redirects]]
+  from = "/team.html"
+  to = "/fr/team.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog.html"
+  to = "/fr/blog.html"
+  status = 301
+
+[[redirects]]
+  from = "/contact.html"
+  to = "/fr/contact.html"
+  status = 301
+
+[[redirects]]
+  from = "/donate.html"
+  to = "/fr/donate.html"
+  status = 301
+
+[[redirects]]
+  from = "/privacy.html"
+  to = "/fr/privacy.html"
+  status = 301
+
+[[redirects]]
+  from = "/mentions.html"
+  to = "/fr/legal.html"
+  status = 301
+
+[[redirects]]
+  from = "/dashboard.html"
+  to = "/fr/dashboard.html"
+  status = 301
+
+# ========== Pages DE anciennes → nouvelles ==========
+
+[[redirects]]
+  from = "/index-de.html"
+  to = "/de/"
+  status = 301
+
+[[redirects]]
+  from = "/project-de.html"
+  to = "/de/project.html"
+  status = 301
+
+[[redirects]]
+  from = "/team-de.html"
+  to = "/de/team.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog-de.html"
+  to = "/de/blog.html"
+  status = 301
+
+[[redirects]]
+  from = "/contact-de.html"
+  to = "/de/contact.html"
+  status = 301
+
+[[redirects]]
+  from = "/donate-de.html"
+  to = "/de/donate.html"
+  status = 301
+
+[[redirects]]
+  from = "/privacy-de.html"
+  to = "/de/privacy.html"
+  status = 301
+
+[[redirects]]
+  from = "/mentions-de.html"
+  to = "/de/legal.html"
+  status = 301
+
+[[redirects]]
+  from = "/dashboard-de.html"
+  to = "/de/dashboard.html"
+  status = 301
+
+# ========== Articles blog ==========
+
+[[redirects]]
+  from = "/article1.html"
+  to = "/blog/fr/article-1.html"
+  status = 301
+
+[[redirects]]
+  from = "/article2.html"
+  to = "/blog/fr/article-2.html"
+  status = 301
+
+[[redirects]]
+  from = "/article3.html"
+  to = "/blog/fr/article-3.html"
+  status = 301
+
+[[redirects]]
+  from = "/article4.html"
+  to = "/blog/fr/article-4.html"
+  status = 301
+
+[[redirects]]
+  from = "/article5.html"
+  to = "/blog/fr/article-5.html"
+  status = 301
+
+[[redirects]]
+  from = "/article6.html"
+  to = "/blog/fr/article-6.html"
+  status = 301
+
+[[redirects]]
+  from = "/article7.html"
+  to = "/blog/fr/article-7.html"
+  status = 301
+
+# ========== Anciens chemins d'images ==========
+
+[[redirects]]
+  from = "/Logo_sophira.png"
+  to = "/assets/images/fallback/Logo_sophira.png"
+  status = 301
+
+[[redirects]]
+  from = "/mathew-schwartz-91ryOVMlBJc-unsplash.jpg"
+  to = "/assets/images/optimized/background.webp"
+  status = 301
+
+# ============================================
+# SECURITY HEADERS
+# ============================================
+
+# Headers de sécurité pour toutes les pages
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Sécurité de base
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    
+    # HSTS - Force HTTPS (1 an)
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    
+    # Content Security Policy
+    Content-Security-Policy = '''
+      default-src 'self';
+      script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com;
+      style-src 'self' 'unsafe-inline';
+      font-src 'self';
+      img-src 'self' data: https:;
+      connect-src 'self' https://www.google-analytics.com;
+      frame-src https://chatgpt.com;
+      base-uri 'self';
+      form-action 'self';
+      upgrade-insecure-requests;
+    '''
+    
+    # Permissions Policy
+    Permissions-Policy = '''
+      geolocation=(),
+      microphone=(),
+      camera=(),
+      payment=(),
+      usb=(),
+      magnetometer=(),
+      gyroscope=(),
+      accelerometer=()
+    '''
+
+# ============================================
+# CACHE HEADERS (Performance)
+# ============================================
+
+# Cache agressif pour les assets (1 an)
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Pas de cache pour les pages HTML
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Cache pour les fonts (1 an + CORS)
+[[headers]]
+  for = "/assets/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Access-Control-Allow-Origin = "*"
+
+# Cache pour les images (1 an)
+[[headers]]
+  for = "/assets/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Headers spécifiques pour les favicons
+[[headers]]
+  for = "/assets/icons/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+# ============================================
+# CUSTOM 404
+# ============================================
+
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
