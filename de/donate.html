@@ -21,6 +21,9 @@
   <!-- CSS -->
   <link rel="stylesheet" href="/assets/css/main.css" />
 
+  <!-- PayPal SDK -->
+  <script src="https://www.paypal.com/sdk/js?client-id=BAAGxn8h3EeDctBRmrD3icvmvjwmWp-VYeWEr8D4OWJjvlgkqjMzsz4ZDr6WrdTtfMOxYDElsbG9NGJ4CA&components=hosted-buttons&disable-funding=venmo&currency=CHF"></script>
+
   <!-- GA4 -->
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -42,10 +45,9 @@
   </script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Aller au contenu principal</a>
+  <a class="skip-link" href="#main">Zum Hauptinhalt springen</a>
 
   <div class="overlay">
-    <!-- NAVIGATION -->
     <header class="navbar" role="navigation">
       <a class="brand" href="/de/">
         <img src="/assets/images/optimized/logo.webp" alt="Logo Sophira" loading="eager" />
@@ -53,13 +55,13 @@
       </a>
 
       <nav class="primary">
-        <a href="/de/">Accueil</a>
-        <a href="/de/team.html">Équipe</a>
-        <a href="/de/project.html">Projet social</a>
-        <a href="/de/dashboard.html">Tableau de bord</a>
-        <a href="/jobs/">Portail Emplois</a>
+        <a href="/de/">Startseite</a>
+        <a href="/de/team.html">Team</a>
+        <a href="/de/project.html">Soziales Projekt</a>
+        <a href="/de/dashboard.html">Dashboard</a>
+        <a href="/jobs/">Stellenportal</a>
         <a href="/de/blog.html">Blog</a>
-        <a href="/de/contact.html">Contact</a>
+        <a href="/de/contact.html">Kontakt</a>
       </nav>
 
       <div class="controls">
@@ -71,11 +73,11 @@
           DE
         </button>
         <div id="lang-menu" class="lang-menu" aria-hidden="true">
-          <a href="/fr/donate.html" lang="fr" >Français</a>
+          <a href="/fr/donate.html" lang="fr">Français</a>
           <a href="/de/donate.html" lang="de" aria-current="true">Deutsch</a>
         </div>
 
-        <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-controls="menu-mobile" aria-expanded="false">
+        <button class="burger" id="burger" aria-label="Menü öffnen" aria-controls="menu-mobile" aria-expanded="false">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
             <path d="M3 6h18M3 12h18M3 18h18" stroke-width="2" stroke-linecap="round"/>
           </svg>
@@ -85,19 +87,18 @@
 
     <div id="menu-mobile" class="mobile-panel" hidden>
       <div class="mobile-links">
-        <a href="/de/">Accueil</a>
-        <a href="/de/team.html">Équipe</a>
-        <a href="/de/project.html">Projet social</a>
-        <a href="/de/dashboard.html">Tableau de bord</a>
-        <a href="/jobs/">Portail Emplois</a>
+        <a href="/de/">Startseite</a>
+        <a href="/de/team.html">Team</a>
+        <a href="/de/project.html">Soziales Projekt</a>
+        <a href="/de/dashboard.html">Dashboard</a>
+        <a href="/jobs/">Stellenportal</a>
         <a href="/de/blog.html">Blog</a>
-        <a href="/de/contact.html">Contact</a>
+        <a href="/de/contact.html">Kontakt</a>
       </div>
     </div>
 
-    <!-- MAIN CONTENT -->
     <main id="main" class="container">
-<div class="content">
+      <div class="content">
         <h2>Spenden</h2>
 
         <p class="intro">
@@ -106,30 +107,27 @@
           Vielen Dank für Ihr Vertrauen und Ihre Unterstützung.
         </p>
 
-        <ul class="impact-list" aria-label="Wirkung Ihrer Spende">
+        <ul class="impact-list">
           <li>Teilfinanzierung von Kurs- und Prüfungsgebühren.</li>
           <li>Beitrag zur Grundausstattung (Laptop, Kopfhörer, Software, Internetzugang).</li>
           <li>Ermöglichen von persönlicher Begleitung: Mentoring, Coaching, Bewerbungsunterstützung.</li>
         </ul>
 
-        <!-- Kontextbanner (bei URL-Parametern) -->
         <div id="ctx" class="context" role="status" aria-live="polite"></div>
 
-        <!-- Spenden-Block mit PayPal -->
-        <section class="donate-box" aria-label="Online-Spende">
+        <section class="donate-box">
           <h3>Online spenden</h3>
           <p>
             Die Zahlung erfolgt in CHF über PayPal. Sie können mit Kreditkarte oder Ihrem PayPal-Konto spenden.
           </p>
 
-          <div class="donate-amounts" aria-hidden="true">
+          <div class="donate-amounts">
             <span class="donate-pill">CHF 20</span>
             <span class="donate-pill">CHF 50</span>
             <span class="donate-pill">CHF 100</span>
             <span class="donate-pill">Anderer Betrag</span>
           </div>
 
-          <!-- Gehosteter PayPal-Button -->
           <div id="paypal-container-LYWSHNWSRDXYW"></div>
           <script>
             paypal.HostedButtons({
@@ -155,8 +153,7 @@
           </noscript>
         </section>
 
-        <!-- TWINT -->
-        <section class="twint-box" aria-label="Spende via TWINT">
+        <section class="twint-box">
           <h3>Mit TWINT spenden</h3>
           <p>
             Sie können Sophira auch unterstützen, indem Sie diesen TWINT-QR-Code mit Ihrer Bank-App oder der TWINT-App scannen.
@@ -167,8 +164,7 @@
           </p>
         </section>
 
-        <!-- Verwendung der Spenden -->
-        <section aria-label="Verwendung der Spenden" style="margin-top:1.8rem;">
+        <section style="margin-top:1.8rem;">
           <h3>Wie Ihre Spende eingesetzt wird</h3>
           <p class="muted">
             Sophira ist ein gemeinnütziger Verein mit Sitz in Basel. Die Spenden werden ausschliesslich dafür verwendet,
@@ -181,13 +177,12 @@
           </ul>
           <p class="muted">
             Mehr über unsere Arbeit erfahren Sie auf der Seite
-            <a href="project-de.html">Soziales Projekt</a> und darüber, wer wir sind, auf der Seite
-            <a href="team-de.html">Team</a>.
+            <a href="/de/project.html">Soziales Projekt</a> und darüber, wer wir sind, auf der Seite
+            <a href="/de/team.html">Team</a>.
           </p>
         </section>
 
-        <!-- Unterstützerkreise -->
-        <section class="form-card" aria-label="Unterstützerkreise">
+        <section class="form-card">
           <h3>Unsere Unterstützerkreise</h3>
           <p class="muted">
             Jeder Beitrag stärkt direkt die berufliche Neuorientierung von Erwachsenen in der Schweiz.
@@ -220,11 +215,10 @@
           </p>
         </section>
 
-        <div class="contact-info" aria-label="Kontaktdaten des Vereins">
+        <div class="contact-info">
           <p><strong>Adresse:</strong> Sandgrubenstrasse, 4058 Basel, Schweiz</p>
           <p><strong>E-Mail:</strong> association_sophira@protonmail.com</p>
 
-          <!-- Geschütztes Telefon -->
           <div class="phone-box" aria-live="polite">
             <p style="margin:0;">
               <strong>Telefon:</strong>
@@ -238,7 +232,6 @@
               über das Formular unten angezeigt. Die Anzeige bleibt 30 Tage auf diesem Gerät aktiv.
             </p>
 
-            <!-- Mini-Formular Netlify (AJAX) -->
             <form id="phone-request" name="sophira-phone-request" class="phone-form" method="POST" data-netlify="true" netlify-honeypot="bot-field">
               <input type="hidden" name="form-name" value="sophira-phone-request" />
               <p style="display:none"><label>Nicht ausfüllen: <input name="bot-field" /></label></p>
@@ -273,8 +266,7 @@
           referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
 
-      <!-- Kontaktformular für Spenden-Fragen -->
-      <section class="form-card" aria-label="Fragen zu Spenden">
+      <section class="form-card">
         <h3>Fragen oder Angaben zu Ihrer Spende</h3>
         <p class="muted">
           Wenn Sie vom Job-Portal kommen, wird die Referenz automatisch übermittelt.
@@ -284,7 +276,6 @@
           <input type="hidden" name="form-name" value="sophira-spende" />
           <p style="display:none"><label>Nicht ausfüllen: <input name="bot-field" /></label></p>
 
-          <!-- Versteckte Felder aus der URL -->
           <input type="hidden" id="f-ref" name="ref" />
           <input type="hidden" id="f-type" name="type" />
 
@@ -304,13 +295,12 @@
 
           <div class="actions">
             <button class="btn" type="submit">Senden</button>
-            <a class="btn outline" href="jobs/index-de.html">Zum Job-Portal</a>
+            <a class="btn outline" href="/jobs/">Zum Stellenportal</a>
           </div>
         </form>
       </section>
 
-      <!-- Kleine FAQ -->
-      <section class="form-card" aria-label="Häufige Fragen zu Spenden">
+      <section class="form-card">
         <h3>Häufige Fragen</h3>
         <p class="muted"><strong>Kann ich ohne PayPal-Konto spenden?</strong><br>
           Ja. Sie können direkt auf der PayPal-Oberfläche mit einer Kreditkarte spenden, ohne ein PayPal-Konto zu erstellen.
@@ -325,7 +315,7 @@
         </p>
       </section>
 
-      <section class="social" aria-label="Soziale Netzwerke">
+      <section class="social">
         <h3>Folgen Sie uns</h3>
         <p class="muted">Bleiben Sie über Aktionen, Events und neue Möglichkeiten informiert.</p>
         <a class="tiktok" href="https://www.tiktok.com/@sophira" target="_blank" rel="noopener">TikTok</a>
@@ -334,9 +324,9 @@
     </main>
 
     <footer>
-      <p>&copy; 2026 Sophira Association | Basel, Suisse | 
-         <a href="/de/privacy.html">Confidentialité</a> | 
-         <a href="/de/legal.html">Mentions légales</a>
+      <p>&copy; 2026 Sophira Association | Basel, Schweiz | 
+         <a href="/de/privacy.html">Datenschutz</a> | 
+         <a href="/de/legal.html">Impressum</a>
       </p>
     </footer>
   </div>
@@ -345,18 +335,114 @@
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
       <path d="M21 15a4 4 0 0 1-4 4H8l-5 4V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v8z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
-    <span>Assistant Sophira</span>
+    <span>Sophira Assistent</span>
   </a>
 
   <div id="cookie-banner" class="cookie-banner" role="dialog">
-    <p><strong>Cookies & confidentialité.</strong> Nous utilisons des cookies essentiels au fonctionnement du site et, avec votre accord, des mesures d'audience (Google Analytics). <a href="/de/privacy.html">En savoir plus</a></p>
+    <p><strong>Cookies & Datenschutz.</strong> Wir verwenden essenzielle Cookies und, mit Ihrer Zustimmung, Analyse-Tools (Google Analytics). <a href="/de/privacy.html">Mehr erfahren</a></p>
     <div class="cookie-actions">
-      <button class="btn minor" id="cookie-refuse">Refuser l'analyse</button>
-      <button class="btn" id="cookie-accept">Accepter l'analyse</button>
-      <button class="btn outline" id="cookie-later">Plus tard</button>
+      <button class="btn minor" id="cookie-refuse">Analyse ablehnen</button>
+      <button class="btn" id="cookie-accept">Analyse akzeptieren</button>
+      <button class="btn outline" id="cookie-later">Später</button>
     </div>
   </div>
 
   <script src="/assets/js/main.js"></script>
+  <script>
+    // URL-Parameter
+    (function(){
+      const params = new URLSearchParams(window.location.search);
+      const ref = params.get('ref');
+      const type = params.get('type');
+      const from = params.get('from');
+
+      if(ref) document.getElementById('f-ref').value = ref;
+      if(type) document.getElementById('f-type').value = type;
+
+      const ctx = document.getElementById('ctx');
+      if(!ctx) return;
+
+      if(ref && type){
+        ctx.classList.add('ok');
+        const label = (type === 'offer') ? 'Stelle' : (type === 'candidate' ? 'Kandidat:innenprofil' : 'Referenz');
+        ctx.innerHTML = `Übermittelte Referenz: <strong>${ref}</strong> (${label}). Wir verknüpfen Ihre Nachricht mit diesem Dossier.`;
+        ctx.style.display = 'block';
+      } else if (from === 'profil') {
+        ctx.classList.add('warn');
+        ctx.innerHTML = `Sie kontaktieren Sophira aus Ihrem Profilbereich. Bitte geben Sie den Zweck Ihrer Anfrage an.`;
+        ctx.style.display = 'block';
+      }
+    })();
+
+    // Geschütztes Telefon
+    (function(){
+      const PHONE_NUMBER = '+41 78 624 89 79';
+      const KEY = 'sophira_phone_ok_until';
+      const DAYS = 30;
+
+      const mask = document.getElementById('phone-mask');
+      const btn = document.getElementById('btn-reveal');
+      const form = document.getElementById('phone-request');
+      const cancel = document.getElementById('pr-cancel');
+      const statusEl = document.getElementById('pr-status');
+
+      function now(){ return new Date().getTime(); }
+      function inDays(d){ return d*24*60*60*1000; }
+      function markOk(){ localStorage.setItem(KEY, String(now()+inDays(DAYS))); }
+      function hasOk(){ const until = Number(localStorage.getItem(KEY)||0); return until && now()<until; }
+      function reveal(){
+        if(mask) mask.textContent = PHONE_NUMBER;
+        if(btn) btn.style.display='none';
+        if(form) form.style.display='none';
+      }
+
+      if(hasOk()) reveal();
+
+      if(btn){
+        btn.addEventListener('click', ()=>{
+          form.style.display='grid';
+          btn.style.display='none';
+          const n=document.getElementById('pr-name'); if(n) n.focus();
+        });
+      }
+      if(cancel){
+        cancel.addEventListener('click', ()=>{
+          form.style.display='none';
+          btn.style.display='inline-block';
+          statusEl.textContent='';
+        });
+      }
+
+      if(form){
+        form.addEventListener('submit', async (e)=>{
+          e.preventDefault();
+          statusEl.textContent = 'Senden…';
+
+          const data = new FormData(form);
+          const body = new URLSearchParams();
+          for (const [k,v] of data.entries()){ body.append(k, v); }
+
+          try{
+            const res = await fetch('/', {
+              method:'POST',
+              headers:{ 'Content-Type':'application/x-www-form-urlencoded' },
+              body: body.toString()
+            });
+            if(res.ok){
+              markOk();
+              reveal();
+              statusEl.textContent = 'Danke, die Nummer ist sichtbar.';
+            }else{
+              statusEl.textContent = 'Fehler beim Senden. Bitte erneut versuchen.';
+              btn.style.display='inline-block';
+            }
+          }catch(err){
+            statusEl.textContent = 'Keine Verbindung. Bitte später erneut versuchen.';
+            btn.style.display='inline-block';
+          }
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
