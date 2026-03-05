@@ -8,7 +8,7 @@
   <!-- SEO -->
   <link rel="canonical" href="https://sophira.ch/de/team.html" />
   <meta name="robots" content="index,follow" />
-  <meta name="description" content="Lernen Sie das Sophira-Team kennen: Arijanit Idrizi (Präsident), Quôc-Bao Nguyên (Co-Präsident). Eine Position als Kassierer·in ist offen." />
+  <meta name="description" content="Lernen Sie das Sophira-Team kennen: Arijanit Idrizi (Präsident), Quôc-Bao Nguyên (Co-Präsident) und Urs Hafner (Kassier)." />
 
   <!-- Hreflang -->
   <link rel="alternate" hreflang="fr" href="https://sophira.ch/fr/team.html" />
@@ -40,12 +40,26 @@
     gtag('js', new Date());
     gtag('config', 'G-FL1S0MJWB1');
   </script>
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Sophira",
+    "url":"https://sophira.ch/",
+    "member":[
+      {"@type":"Person","name":"Arijanit Idrizi","jobTitle":"Präsident"},
+      {"@type":"Person","name":"Quôc-Bao Nguyên","jobTitle":"Co-Präsident"},
+      {"@type":"Person","name":"Urs Hafner","jobTitle":"Kassier"}
+    ]
+  }
+  </script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Aller au contenu principal</a>
+  <a class="skip-link" href="#main">Zum Hauptinhalt springen</a>
 
   <div class="overlay">
-    <!-- NAVIGATION -->
     <header class="navbar" role="navigation">
       <a class="brand" href="/de/">
         <img src="/assets/images/optimized/logo.webp" alt="Logo Sophira" loading="eager" />
@@ -53,13 +67,13 @@
       </a>
 
       <nav class="primary">
-        <a href="/de/">Accueil</a>
-        <a href="/de/team.html">Équipe</a>
-        <a href="/de/project.html">Projet social</a>
-        <a href="/de/dashboard.html">Tableau de bord</a>
-        <a href="/jobs/">Portail Emplois</a>
+        <a href="/de/">Startseite</a>
+        <a href="/de/team.html" aria-current="page">Team</a>
+        <a href="/de/project.html">Soziales Projekt</a>
+        <a href="/de/dashboard.html">Dashboard</a>
+        <a href="/jobs/">Stellenportal</a>
         <a href="/de/blog.html">Blog</a>
-        <a href="/de/contact.html">Contact</a>
+        <a href="/de/contact.html">Kontakt</a>
       </nav>
 
       <div class="controls">
@@ -71,11 +85,11 @@
           DE
         </button>
         <div id="lang-menu" class="lang-menu" aria-hidden="true">
-          <a href="/fr/team.html" lang="fr" >Français</a>
+          <a href="/fr/team.html" lang="fr">Français</a>
           <a href="/de/team.html" lang="de" aria-current="true">Deutsch</a>
         </div>
 
-        <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-controls="menu-mobile" aria-expanded="false">
+        <button class="burger" id="burger" aria-label="Menü öffnen" aria-controls="menu-mobile" aria-expanded="false">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
             <path d="M3 6h18M3 12h18M3 18h18" stroke-width="2" stroke-linecap="round"/>
           </svg>
@@ -85,74 +99,84 @@
 
     <div id="menu-mobile" class="mobile-panel" hidden>
       <div class="mobile-links">
-        <a href="/de/">Accueil</a>
-        <a href="/de/team.html">Équipe</a>
-        <a href="/de/project.html">Projet social</a>
-        <a href="/de/dashboard.html">Tableau de bord</a>
-        <a href="/jobs/">Portail Emplois</a>
+        <a href="/de/">Startseite</a>
+        <a href="/de/team.html" aria-current="page">Team</a>
+        <a href="/de/project.html">Soziales Projekt</a>
+        <a href="/de/dashboard.html">Dashboard</a>
+        <a href="/jobs/">Stellenportal</a>
         <a href="/de/blog.html">Blog</a>
-        <a href="/de/contact.html">Contact</a>
+        <a href="/de/contact.html">Kontakt</a>
       </div>
     </div>
 
-    <!-- MAIN CONTENT -->
     <main id="main" class="container">
-<section class="hero">
+      <section class="hero">
         <h2>Unser Team</h2>
-        <p class="subtitle">Engagierte Menschen für eine <em>würdige</em>, <em>inklusive</em> und <em>nachhaltige</em> Neuorientierung. Wir bauen Brücken zwischen Talenten und Zukunftsberufen.</p>
+        <p class="subtitle">
+          Engagierte Menschen für eine würdige, inklusive und nachhaltige Neuorientierung. 
+          Wir bauen Brücken zwischen Talenten und Zukunftsberufen.
+        </p>
       </section>
 
-      <section class="team" aria-label="Teammitglieder">
-        <!-- Präsident -->
-        <article class="card" itemscope itemtype="https://schema.org/Person">
-          <img class="avatar" src="photo%20CV.JPG" alt="Porträt von Arijanit Idrizi" width="96" height="96" loading="lazy" decoding="async" fetchpriority="high" itemprop="image" />
+      <section class="team">
+        <article class="card">
+          <img class="avatar" src="/assets/images/optimized/photo-ari.webp" alt="Porträt von Arijanit Idrizi" width="96" height="96" loading="lazy" />
           <div>
-            <h3 itemprop="name">Arijanit Idrizi</h3>
-            <div class="role" itemprop="jobTitle">Präsident</div>
-            <p class="bio" itemprop="description">Sozialunternehmer und Datenanalyst. Arijanit verantwortet die Vision von Sophira: Erwachsenen in der Schweiz den Zugang zu digitalen Kompetenzen und Zukunftsberufen zu öffnen.</p>
+            <h3>Arijanit Idrizi</h3>
+            <div class="role">Präsident</div>
+            <p class="bio">
+              Sozialunternehmer und Datenanalyst. Arijanit verantwortet die Vision von Sophira: 
+              Erwachsenen in der Schweiz den Zugang zu digitalen Kompetenzen und Zukunftsberufen zu öffnen.
+            </p>
             <div class="meta">Sprachen: FR, EN, DE, SQ · Basel, Schweiz</div>
           </div>
         </article>
 
-        <!-- Co-Präsident -->
-        <article class="card" itemscope itemtype="https://schema.org/Person">
-          <img class="avatar" src="/assets/images/optimized/photo-bao.webp" alt="Porträt von Quôc-Bao Nguyên" width="96" height="96" loading="lazy" decoding="async" fetchpriority="high" itemprop="image" />
+        <article class="card">
+          <img class="avatar" src="/assets/images/optimized/photo-bao.webp" alt="Porträt von Quôc-Bao Nguyên" width="96" height="96" loading="lazy" />
           <div>
-            <h3 itemprop="name">Quôc-Bao Nguyên</h3>
-            <div class="role" itemprop="jobTitle">Co-Präsident</div>
-            <p class="bio" itemprop="description">Innovation & Community. Bao koordiniert Partnerschaften mit Bildungs- und Wirtschaftspartnern und schafft konkrete Brücken in den Arbeitsmarkt.</p>
+            <h3>Quôc-Bao Nguyên</h3>
+            <div class="role">Co-Präsident</div>
+            <p class="bio">
+              Innovation & Community. Bao koordiniert Partnerschaften mit Bildungs- und Wirtschaftspartnern 
+              und schafft konkrete Brücken in den Arbeitsmarkt.
+            </p>
             <div class="meta">Partnerschaften · Netzwerk · Community</div>
           </div>
         </article>
 
-        <!-- Kassierer·in gesucht -->
-        <article class="card" itemscope itemtype="https://schema.org/Person">
-          <img class="avatar" src="/assets/images/optimized/img-1.webp" alt="Platzhalterfoto für die Rolle Kassierer·in" width="96" height="96" loading="lazy" decoding="async" itemprop="image" />
+        <article class="card">
+          <img class="avatar" src="/assets/images/optimized/photo-urs.webp" alt="Porträt von Urs Hafner" width="96" height="96" loading="lazy" />
           <div>
-            <h3>Kassierer·in – gesucht</h3>
-            <div class="role">Governance & Transparenz</div>
-            <p class="bio">Wir suchen eine ehrenamtliche (oder Teilzeit-)Kassierer·in zur Stärkung der Finanz-Governance: Pilotbudget, Spenden-Tracking, transparente Berichte.</p>
-            <span class="pill" aria-label="Bewerbungsstatus">Bewerbungen offen</span>
+            <h3>Urs Hafner</h3>
+            <div class="role">Kassier</div>
+            <p class="bio">
+              Professioneller Buchhalter, engagiert für optimale Transparenz und Governance sowie eine 
+              effiziente und vollständige Finanzverwaltung unseres Vereins.
+            </p>
+            <div class="meta">Finanzverwaltung · Budget · Buchhaltung</div>
           </div>
         </article>
       </section>
 
-      <!-- CTA -->
-      <section class="cta" aria-label="Mitwirken">
+      <section class="cta">
         <h3>Möchten Sie mitwirken?</h3>
-        <p>Werden Sie Partner·in, Freiwillige·r oder Förderer·in und beschleunigen Sie die Neuorientierung Erwachsener in der Schweiz.</p>
-        <div class="actions" role="group" aria-label="Hauptaktionen">
-          <a class="btn" href="contact-de.html">Kontakt aufnehmen</a>
-          <a class="btn outline" href="project-de.html">Projekt entdecken</a>
-          <a class="btn" href="donate-de.html">Spenden</a>
+        <p>
+          Werden Sie Partner·in, Freiwillige·r oder Förderer·in und beschleunigen Sie die Neuorientierung 
+          Erwachsener in der Schweiz.
+        </p>
+        <div class="actions">
+          <a class="btn" href="/de/contact.html">Kontakt aufnehmen</a>
+          <a class="btn outline" href="/de/project.html">Projekt entdecken</a>
+          <a class="btn" href="/de/donate.html">Unterstützen</a>
         </div>
       </section>
     </main>
 
     <footer>
-      <p>&copy; 2026 Sophira Association | Basel, Suisse | 
-         <a href="/de/privacy.html">Confidentialité</a> | 
-         <a href="/de/legal.html">Mentions légales</a>
+      <p>&copy; 2026 Sophira Association | Basel, Schweiz | 
+         <a href="/de/privacy.html">Datenschutz</a> | 
+         <a href="/de/legal.html">Impressum</a>
       </p>
     </footer>
   </div>
@@ -161,15 +185,15 @@
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
       <path d="M21 15a4 4 0 0 1-4 4H8l-5 4V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v8z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
-    <span>Assistant Sophira</span>
+    <span>Sophira Assistent</span>
   </a>
 
   <div id="cookie-banner" class="cookie-banner" role="dialog">
-    <p><strong>Cookies & confidentialité.</strong> Nous utilisons des cookies essentiels au fonctionnement du site et, avec votre accord, des mesures d'audience (Google Analytics). <a href="/de/privacy.html">En savoir plus</a></p>
+    <p><strong>Cookies & Datenschutz.</strong> Wir verwenden essenzielle Cookies und, mit Ihrer Zustimmung, Analyse-Tools (Google Analytics). <a href="/de/privacy.html">Mehr erfahren</a></p>
     <div class="cookie-actions">
-      <button class="btn minor" id="cookie-refuse">Refuser l'analyse</button>
-      <button class="btn" id="cookie-accept">Accepter l'analyse</button>
-      <button class="btn outline" id="cookie-later">Plus tard</button>
+      <button class="btn minor" id="cookie-refuse">Analyse ablehnen</button>
+      <button class="btn" id="cookie-accept">Analyse akzeptieren</button>
+      <button class="btn outline" id="cookie-later">Später</button>
     </div>
   </div>
 
