@@ -1072,3 +1072,50 @@ footer a {
     transition: none !important;
   }
 }
+/* ========== FIX BLOG CARDS - HAUTEUR LIMITÉE ========== */
+.post {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 320px;
+  max-height: 380px;
+}
+
+.post h4 {
+  font-size: 1.15rem;
+  margin: 0 0 .5rem 0;
+  line-height: 1.3;
+  /* Limite à 2 lignes */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.post p {
+  font-size: .95rem;
+  color: #4a5568;
+  margin: 0 0 .8rem 0;
+  line-height: 1.6;
+  flex: 1;
+  /* Limite à 5 lignes */
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.post a {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+/* Auto-news section - cards plus courtes */
+.auto-news .post {
+  min-height: 280px;
+  max-height: 320px;
+}
+
+.auto-news .post p {
+  -webkit-line-clamp: 4;
+}
