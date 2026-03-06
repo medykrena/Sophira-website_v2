@@ -529,10 +529,10 @@ nav.primary a[aria-current="page"] {
 .iframe-container {
   position: relative;
   width: 100%;
-  padding-top: 56.25%; /* ← IMPORTANT : ratio 16:9 pour Tableau */
+  padding-top: 0; /* ← IMPORTANT : pas de padding-top avec width/height fixes */
+  height: 827px; /* ← Hauteur fixe */
   overflow: hidden;
   border-radius: 8px;
-  background: #f7fafc;
 }
 
 .iframe-container iframe {
