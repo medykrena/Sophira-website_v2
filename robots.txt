@@ -4,8 +4,10 @@
 User-agent: *
 Allow: /
 
-# Bloquer les fichiers système et techniques
-Disallow: /assets/js/
+# Autoriser explicitement les assets (JS, CSS, images)
+Allow: /assets/
+
+# Bloquer uniquement les fichiers de configuration
 Disallow: /_headers
 Disallow: /netlify.toml
 Disallow: /.git/
@@ -16,15 +18,5 @@ Disallow: /*?utm_*
 Disallow: /*?fbclid=*
 Disallow: /*?gclid=*
 
-# Autoriser explicitement les pages importantes
-Allow: /fr/
-Allow: /de/
-Allow: /jobs/
-Allow: /assets/css/
-Allow: /assets/images/
-
 # Sitemap
 Sitemap: https://sophira.ch/sitemap.xml
-
-# Crawl-delay (optionnel - évite surcharge serveur)
-# Crawl-delay: 1
