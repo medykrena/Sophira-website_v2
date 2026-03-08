@@ -1,4 +1,30 @@
+# Robots.txt pour Sophira.ch
+# Site web bilingue (FR/DE) - Association sociale pour la reconversion professionnelle
+
 User-agent: *
 Allow: /
 
+# Bloquer les fichiers système et techniques
+Disallow: /assets/js/
+Disallow: /_headers
+Disallow: /netlify.toml
+Disallow: /.git/
+Disallow: /node_modules/
+
+# Bloquer les paramètres de tracking
+Disallow: /*?utm_*
+Disallow: /*?fbclid=*
+Disallow: /*?gclid=*
+
+# Autoriser explicitement les pages importantes
+Allow: /fr/
+Allow: /de/
+Allow: /jobs/
+Allow: /assets/css/
+Allow: /assets/images/
+
+# Sitemap
 Sitemap: https://sophira.ch/sitemap.xml
+
+# Crawl-delay (optionnel - évite surcharge serveur)
+# Crawl-delay: 1
