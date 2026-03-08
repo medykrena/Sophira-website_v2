@@ -1315,6 +1315,12 @@ Allow: /assets/
 - [ ] Vérifier indexation Google (toutes pages)
 - [ ] Tester responsive sur vrais devices (iOS, Android)
 
+🎯 AMÉLIORATIONS SEO
+- [ ] Schema.org complet : Google comprend mieux la structure
+- [ ] Alt text descriptif : Meilleure accessibilité
+- [ ] Nom propre dans h3 : Structure sémantique correcte
+- [ ] Extension .png : Image sera chargée correctement
+
 ### Priorité moyenne
 
 - [ ] Ajouter Schema.org structured data (LocalBusiness, FAQPage)
