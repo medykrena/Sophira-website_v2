@@ -9,26 +9,13 @@
 # REDIRECTS 301 - Migration ancienne structure
 # ============================================
 
-# Root redirect avec détection langue
+# ✅ REDIRECTION RACINE SIMPLE (CORRIGÉE POUR GOOGLE)
+# Une seule redirection 301 permanente sans condition de langue
 [[redirects]]
   from = "/"
   to = "/fr/"
-  status = 302
+  status = 301
   force = false
-  conditions = {Language = ["fr"]}
-
-[[redirects]]
-  from = "/"
-  to = "/de/"
-  status = 302
-  force = false
-  conditions = {Language = ["de"]}
-
-# Fallback si pas de langue détectée
-[[redirects]]
-  from = "/"
-  to = "/fr/"
-  status = 302
 
 # ========== Pages FR anciennes → nouvelles ==========
 
@@ -190,19 +177,19 @@
     # HSTS - Force HTTPS (1 an)
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
     
-    # Content Security Policy
-Content-Security-Policy = '''
-  default-src 'self';
-  script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://public.tableau.com;
-  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-  font-src 'self' https://fonts.gstatic.com;
-  img-src 'self' data: https:;
-  connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com;
-  frame-src https://chatgpt.com https://public.tableau.com;
-  base-uri 'self';
-  form-action 'self';
-  upgrade-insecure-requests;
-'''
+    # Content Security Policy (CORRIGÉ POUR TABLEAU PUBLIC)
+    Content-Security-Policy = '''
+      default-src 'self';
+      script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://public.tableau.com;
+      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+      font-src 'self' https://fonts.gstatic.com;
+      img-src 'self' data: https:;
+      connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com;
+      frame-src https://chatgpt.com https://public.tableau.com;
+      base-uri 'self';
+      form-action 'self';
+      upgrade-insecure-requests;
+    '''
     
     # Permissions Policy
     Permissions-Policy = '''
@@ -250,7 +237,3 @@ Content-Security-Policy = '''
   for = "/assets/icons/*"
   [headers.values]
     Cache-Control = "public, max-age=2592000"
-
-# ============================================
-# CUSTOM 404
-# ============================================
